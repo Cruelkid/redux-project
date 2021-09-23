@@ -5,7 +5,9 @@ import { useDispatch } from 'react-redux';
 const Auth = () => {
     const dispatch = useDispatch();
 
-    const loginHandler = () => {
+    const loginHandler = (e) => {
+        e.preventDefault();
+        
         dispatch(authActions.login());
     };
 
